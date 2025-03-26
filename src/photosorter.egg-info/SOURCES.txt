@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/photosorter/__init__.py
+src/photosorter/main.py
+src/photosorter/photo_handler.py
+src/photosorter/resnet_processor.py
+src/photosorter/sift_processor.py
+src/photosorter/terminal_interface.py
+src/photosorter.egg-info/PKG-INFO
+src/photosorter.egg-info/SOURCES.txt
+src/photosorter.egg-info/dependency_links.txt
+src/photosorter.egg-info/entry_points.txt
+src/photosorter.egg-info/requires.txt
+src/photosorter.egg-info/top_level.txt

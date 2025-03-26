@@ -1,0 +1,78 @@
+Metadata-Version: 2.4
+Name: photosorter
+Version: 0.1.0
+Summary: Automatically group similar images using computer vision techniques
+Author: Swayam Patil
+Keywords: computer-vision,image-processing,similarity-detection
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.19.0
+Requires-Dist: scikit-learn>=0.24.0
+Requires-Dist: opencv-python>=4.5.0
+Requires-Dist: torchvision>=0.8.0
+Requires-Dist: torch>=1.7.0
+Requires-Dist: pillow>=8.0.0
+Requires-Dist: tqdm>=4.50.0
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# PhotoSorter
+
+Automatically group similar images using computer vision techniques.
+
+## Installation
+
+```bash
+# For development
+pip install -e .
+
+# For users (once published)
+pip install photosorter
+```
+
+## Usage
+
+After installation, you can use the `photosorter` command directly from your terminal:
+
+```bash
+photosorter [sift|deeplearning] SOURCE DESTINATION [-t THRESHOLD] [-l LIMIT] [-v]
+```
+
+### Arguments
+- `method`: Similarity detection method (sift/deeplearning)
+- `source`: Source directory containing images
+- `destination`: Output directory for grouped images
+
+### Options
+- `-t, --threshold`: Similarity threshold (0.0-1.0)
+- `-l, --limit`: Maximum number of images to process
+- `-v, --verbose`: Enable detailed processing output
+
+## Methods
+1. **SIFT** - Traditional feature matching using Scale-Invariant Feature Transform
+2. **DeepLearning** - ResNet-50 embeddings with cosine similarity comparison
+
+## Example
+```bash
+# Using deep learning method with 0.8 similarity threshold
+photosorter deeplearning ./photos ./sorted_images -t 0.8
+```
