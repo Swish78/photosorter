@@ -23,6 +23,7 @@ setup(
     description="Automatically group similar images using computer vision techniques",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
+    url="https://github.com/Swish78/photosorter",
     keywords="computer-vision, image-processing, similarity-detection",
     classifiers=[
         "Development Status :: 3 - Alpha",
