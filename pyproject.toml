@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "photosorter"
+version = "0.1.0"
+description = "Automatically group similar images using computer vision techniques"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+dependencies = [
+    "numpy>=1.19.0",
+    "scikit-learn>=0.24.0",
+    "opencv-python>=4.5.0",
+    "torchvision>=0.8.0",
+    "torch>=1.7.0",
+    "pillow>=8.0.0",
+    "tqdm>=4.50.0"
+]
+
+[project.scripts]
+photosorter = "photosorter.main:main"
